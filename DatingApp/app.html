@@ -22,21 +22,35 @@
 
   <fieldset>
     <legend>Your General Details</legend>
-    Name: <input type="text">
-    Gender: <input type="radio"><input type = "radio">
-    Age: <input type="number">
-    Date of Birth: <input type="date">
-    Favorite Color: <input type="color">
-    Which Country: <input type="">
+    Name: <input type="text"></br>
+    Gender: <input type="radio"><input type = "radio"></br>
+    Age: <input type="number"></br>
+    Date of Birth: <input type="date"></br>
+    Favorite Color: <input type="color"></br>
+    Which Country: <select name = "country">
+      <option value =""> </option>
+      <option>UK</option>
+      <option>France</option>
+      <option>China</option>
+      <option>Japan</option>
+      <option>India</option>
+    </select>
   </fieldset>
 
   <fieldset>
     <legend> Your Indicators </legend>
-
+    Height:<input type="range" name="height" min="short" max="tall"></br>
+    Salary:<input type="range" name= "salary" min="poor" max="rich">
   </fieldset>
 <fieldset>
-<legend> your Contact Information</legend>
+<legend> Your Contact Information</legend>
+    Email: <input type="email"></br>
+    Telephone <input type="tel"></br>
+    Address: <input type="textarea"></br>
+    Method to contact you: <input type="checkbox" value="Email">"Email"<input type= "checkbox" value = "whatsapp"> "WhatsApp"<input type="checkbox" value = "In-app-chat">"In-App-Chat"
+
 </fieldset>
+<input type="submit">
 </form>
 
 <script src="app.js"></script>
