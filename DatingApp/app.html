@@ -16,18 +16,18 @@
 <form>
   <fieldset>
     <legend>Your Face</legend>
-    Your Image: <input type="file">
+    <label>Your Image:</label> <input type="file">
     <img id = "preview">
   </fieldset>
 
   <fieldset>
     <legend>Your General Details</legend>
-    Name: <input type="text"></br>
-    Gender: <input type="radio"><input type = "radio"></br>
-    Age: <input type="number"></br>
-    Date of Birth: <input type="date"></br>
-    Favorite Color: <input type="color"></br>
-    Which Country: <select name = "country">
+    <label>Name: </label><input type="text"></br>
+    <label>Gender:</label> <input type="radio" id = "check"><input type = "radio" id = "check"></br>
+    <label>Age:</label> <input type="number"></br>
+    <label>Date of Birth:</label> <input type="date"></br>
+    <label>Favorite Color:</label> <input type="color"></br>
+    <label>Which Country:</label> <select name = "country">
       <option value =""> </option>
       <option>UK</option>
       <option>France</option>
@@ -39,15 +39,15 @@
 
   <fieldset>
     <legend> Your Indicators </legend>
-    Height:<input type="range" name="height" min="short" max="tall"></br>
-    Salary:<input type="range" name= "salary" min="poor" max="rich">
+    <label>Height:</label><h7 id = "description">Short</h7><input type="range" name="height" min="short" max="tall"><h7 id = "description">Tall</h7></br>
+    <label>Salary:</label><h7 id = "description">Poor</h7><input type="range" name= "salary" min="poor" max="rich"><h7 id = "description">Rich</h7>
   </fieldset>
 <fieldset>
 <legend> Your Contact Information</legend>
-    Email: <input type="email"></br>
-    Telephone <input type="tel"></br>
-    Address: <input type="textarea"></br>
-    Method to contact you: <input type="checkbox" value="Email">"Email"<input type= "checkbox" value = "whatsapp"> "WhatsApp"<input type="checkbox" value = "In-app-chat">"In-App-Chat"
+    <label>Email:</label> <input type="email"></br>
+    <label>Telephone</label> <input type="tel"></br>
+    <label>Address:</label> <input type="textarea" id = "textarea"></br>
+    <label>Method to contact you:</label> <input type="checkbox" value="Email" id = "check">"Email"<input type= "checkbox" value = "whatsapp" id = "check"> "WhatsApp"<input type="checkbox" value = "In-app-chat" id = "check">"In-App-Chat"
 
 </fieldset>
 <input type="submit">

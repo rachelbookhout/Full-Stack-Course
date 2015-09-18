@@ -1,0 +1,24 @@
+fieldset{
+  background-color: lightyellow;
+  border:10px solid yellow;
+  width: 720px;
+}
+label{
+  width: 180px;
+  display: inline-block;
+  text-align: right;
+  text-align: top;
+}
+
+#check{
+  width:auto;
+}
+
+#textarea{
+  width: 360px;
+  height: 50px;
+}
+#description{
+  text-align:center;
+  background-color: red;
+}
