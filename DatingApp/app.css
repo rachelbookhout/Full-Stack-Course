@@ -9,6 +9,13 @@ label{
   text-align: right;
   text-align: top;
 }
+label:hover {
+  font-size: 40px;
+}
+
+input:hover{
+  font-size: 40px;
+}
 
 #check{
   width:auto;
@@ -18,7 +25,11 @@ label{
   width: 360px;
   height: 50px;
 }
-#description{
+#min-description{
   text-align:center;
   background-color: red;
+}
+#max-description{
+  text-align: :center;
+  background-color: purple;
 }
