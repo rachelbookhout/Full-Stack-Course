@@ -13,46 +13,45 @@
 <body>
 
 <h1> Please Enter your Details For Our Dating Website! </h1>
-<form>
+<form action = "http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method= "post" encype= "multipart/fom-data">
   <fieldset>
     <legend>Your Face</legend>
-    <label>Your Image:</label> <input type="file">
-    <img id = "preview">
+    <label for "image">Your Image:</label> <input type="file" name = "preview"></br>
+    <img id = "preview" height = "100px">
   </fieldset>
 
   <fieldset>
     <legend>Your General Details</legend>
-    <label>Name: </label><input type="text"></br>
-    <label>Gender:</label> <input type="radio" id = "check"><input type = "radio" id = "check"></br>
-    <label>Age:</label> <input type="number"></br>
-    <label>Date of Birth:</label> <input type="date"></br>
-    <label>Favorite Color:</label> <input type="color"></br>
-    <label>Which Country:</label> <select name = "country">
-      <option value =""> </option>
-      <option>UK</option>
-      <option>France</option>
-      <option>China</option>
-      <option>Japan</option>
-      <option>India</option>
+    <label for "name">Name: </label><input type="text"></br>
+    <label for "gender">Gender:</label> <h7 id = "female">Female</h7><input type="radio" id = "check"><h7 id ="male">Male</h7><input type = "radio" id = "check"></br>
+    <label for "age">Age:</label> <input type="number"></br>
+    <label for "date of birth">Date of Birth:</label> <input type="date"></br>
+    <label for "color">Favorite Color:</label> <input type="color"></br>
+    <label for "country">Which Country:</label> <select name = "country">
+      <option value ="no-country"> </option>
+      <option value = "UK">UK</option>
+      <option value = "France">France</option>
+      <option value = "China">China</option>
+      <option value = "Japan">Japan</option>
+      <option value = "India">India</option>
     </select>
   </fieldset>
 
   <fieldset>
     <legend> Your Indicators </legend>
-    <label>Height:</label><h7 id = "min-description">Short</h7><input type="range" name="height" min="short" max="tall"><h7 id = "max-description">Tall</h7></br>
-    <label>Salary:</label><h7 id = "min-description">Poor</h7><input type="range" name= "salary" min="poor" max="rich"><h7 id = "max-description">Rich</h7>
+    <label for "height">Height:</label><h7 id = "min-description">Short</h7><input type="range" name="height" min="short" max="tall"><h7 id = "max-description">Tall</h7></br>
+    <label for "salary">Salary:</label><h7 id = "min-description">Poor</h7><input type="range" name= "salary" min="poor" max="rich"><h7 id = "max-description">Rich</h7>
   </fieldset>
 <fieldset>
 <legend> Your Contact Information</legend>
-    <label>Email:</label> <input type="email"></br>
-    <label>Telephone</label> <input type="tel"></br>
-    <label>Address:</label> <input type="textarea" id = "textarea"></br>
-    <label>Method to contact you:</label> <input type="checkbox" value="Email" id = "check">"Email"<input type= "checkbox" value = "whatsapp" id = "check"> "WhatsApp"<input type="checkbox" value = "In-app-chat" id = "check">"In-App-Chat"
+    <label for "email">Email:</label> <input type="email"></br>
+    <label for "telphone">Telephone</label> <input type="tel"></br>
+    <label for "address">Address:</label> <input type="textarea" id = "textarea"></br>
+    <label for "contact-method">Method to contact you:</label> <input type="checkbox" value="Email" id = "check">"Email"<input type= "checkbox" value = "whatsapp" id = "check"> "WhatsApp"<input type="checkbox" value = "In-app-chat" id = "check">"In-App-Chat"
 
 </fieldset>
 <input type="submit">
 </form>
-
 <script src="http://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
 </body>
 
