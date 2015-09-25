@@ -4,14 +4,19 @@ var target = colors[target_index]
 var finshed = false;
 var numberOfGuesses = 0
 
-function start_game(){
+function do_game(){
   while (!finished)
   {
     var guess_input = prompt("I'm thinking of one of these colors \n\n" +
                           " blue, cyan, gold, gray, green, magenta, orange, red, white, yellow\n\n"+
                           " What color am I thinking of?");
     numberOfGuesses+=1
-    if (colors.indexOf(guess_input) == -1)
+    check_guess();
+  }
+}
+
+function check_guess(){
+  if (colors.indexOf(guess_input) == -1)
     {
     alert("Sorry, I don't recogonize your color\n\n"
           + "Please try again");
@@ -37,5 +42,4 @@ function start_game(){
       finished = true;
     }
   }
-}
 }
