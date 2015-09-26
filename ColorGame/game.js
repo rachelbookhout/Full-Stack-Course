@@ -8,7 +8,7 @@ function do_game(){
   while (!finished)
   {
     var answer = prompt("I'm thinking of one of these colors \n\n" +
-                          " blue, cyan, gold, gray, green, magenta, orange, red, white, yellow\n\n"+
+                          " blue, cyan, gold, grey, green, magenta, orange, red, white, yellow\n\n"+
                           " What color am I thinking of?");
     guess_input = String(answer);
     numberOfGuesses+=1
