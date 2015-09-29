@@ -1,10 +1,20 @@
 var numberOfFaces = 5;
 var theLeftSide = document.getElementById("leftSide");
 var theRightSide = document.getElementById("rightSide");
-var theBody = document.getElementById("body")[0];
+var theBody = document.getElementById("body");
 
 function generateFaces(){
   //faces are created in a loop and executes numberofFaces times
+  for (i = 0; i < numberofFaces; i++){
+
+    var width = Math.floor((Math.random() * style.left) + 1);
+    var height = Math.floor((Math.random() * style.top) + 1);
+    var smiley = createElement("img");
+    smiley.setAttribute("src","./Scripts/smile.png" );
+    smiley.setAttribute("height", height);
+    smiley.setAttribute("width", width);
+    theLeftSide.appendChild(smiley);
+  }
   //in each iteration an image is created using createElement()
   //the img is the smily face
   //the position is controlled by the top and left value
@@ -31,15 +41,15 @@ function playGame(){
 
 }
 
- //add a onclick event to the last child on the left side
-  theLeftSide.lastChild.onclick= function nextLevel(event){
-        event.stopPropagation();
-        numberOfFaces += 5;
-        generateFaces();
-  };
-  //if they don't click on the last child, end the game
-  theBody.onclick = function gameOver() {
-    alert("Game Over!");
-    theBody.onclick = null;
-    theLeftSide.lastChild.onclick = null;
-  };
+ // //add a onclick event to the last child on the left side
+ //  theLeftSide.lastChild.onclick= function nextLevel(event){
+ //        event.stopPropagation();
+ //        numberOfFaces += 5;
+ //        generateFaces();
+ //  };
+ //  //if they don't click on the last child, end the game
+ //  theBody.onclick = function gameOver() {
+ //    alert("Game Over!");
+ //    theBody.onclick = null;
+ //    theLeftSide.lastChild.onclick = null;
+ //  };
