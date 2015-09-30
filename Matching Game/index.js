@@ -27,6 +27,8 @@ function generateFaces(){
 
 function createRightSide(){
   //use cloneNode(true) to copy the leftSide div (leftSideImages = theLeftSide.cloneNode(true);)
+  leftSideImages = theLeftSide.cloneNode(true);
+
   //delete the last child of leftSideImages
   //add leftSideImages to RightSide div
 
