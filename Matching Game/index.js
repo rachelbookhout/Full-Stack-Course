@@ -14,6 +14,7 @@ function generateFaces(){
     smiley.setAttribute("height", height);
     smiley.setAttribute("width", width);
     theLeftSide.appendChild(smiley);
+    i+=1
   }
   //in each iteration an image is created using createElement()
   //the img is the smily face
@@ -27,8 +28,9 @@ function generateFaces(){
 
 function createRightSide(){
   //use cloneNode(true) to copy the leftSide div (leftSideImages = theLeftSide.cloneNode(true);)
-  leftSideImages = theLeftSide.cloneNode(true);
-
+  var leftSideImages = theLeftSide.cloneNode(true);
+  leftSideImages.removeChild(leftSideImages.lastChild);
+  theRightSide.appendChild(leftSide);
   //delete the last child of leftSideImages
   //add leftSideImages to RightSide div
 
