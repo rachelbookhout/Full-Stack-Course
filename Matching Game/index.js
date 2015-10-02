@@ -5,11 +5,11 @@ var theBody = document.getElementById("body");
 
 function generateFaces(){
   //faces are created in a loop and executes numberofFaces times
-  for (i = 0; i < numberofFaces; i++){
+  for (i = 0; i < numberOfFaces; i++){
 
-    var width = Math.floor((Math.random() * style.left) + 1);
-    var height = Math.floor((Math.random() * style.top) + 1);
-    var smiley = createElement("img");
+    var width = Math.floor((Math.random() * theLeftSide.style.left) + 1);
+    var height = Math.floor((Math.random() * theLeftSide.style.top) + 1);
+    var smiley = document.createElement("img");
     smiley.setAttribute("src","./Scripts/smile.png" );
     smiley.setAttribute("height", height);
     smiley.setAttribute("width", width);
@@ -37,11 +37,22 @@ function createRightSide(){
 }
 
 function playGame(){
+ generateFaces();
+ createRightSide();
+ theLeftSide.lastChild.onclick= function nextLevel(event){
+        event.stopPropagation();
+         numberOfFaces += 5;
+         generateFaces();
+  };
  //encorporte the two below methods for how the game is played
  //if they are successful
   //delete out all the child nodes of both left and right sides
  //if they are not
-
+theBody.onclick = function gameOver() {
+     alert("Game Over!");
+     theBody.onclick = null;
+     theLeftSide.lastChild.onclick = null;
+};
 
 }
 
