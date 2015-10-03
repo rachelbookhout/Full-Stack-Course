@@ -3,19 +3,29 @@ var theLeftSide = document.getElementById("leftSide");
 var theRightSide = document.getElementById("rightSide");
 var theBody = document.getElementById("body");
 
-function generateFaces(){
-  //faces are created in a loop and executes numberofFaces times
-  for (i = 0; i < numberOfFaces; i++){
+function generateFaces() {
 
-    var width = Math.floor((Math.random() * theLeftSide.style.left) + 1);
-    var height = Math.floor((Math.random() * theLeftSide.style.top) + 1);
-    var smiley = document.createElement("img");
-    smiley.setAttribute("src","./Scripts/smile.png" );
-    smiley.setAttribute("height", height);
-    smiley.setAttribute("width", width);
-    theLeftSide.appendChild(smiley);
-    i+=1
-  }
+for(var i=0; i<numberOfFaces; i++){
+
+var imgpositionLeft = Math.floor(Math.random()*400);
+
+var imgpositionTop = Math.floor(Math.random()*400);
+
+var imgface = document.createElement("img");
+
+imgface.setAttribute("src","https://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png");
+
+imgface.style.top = imgpositionTop+"px";
+
+imgface.style.left = imgpositionLeft +"px";
+
+theLeftSide.appendChild(imgface);
+
+}
+
+//createRightSide();
+
+}
   //in each iteration an image is created using createElement()
   //the img is the smily face
   //the position is controlled by the top and left value
@@ -24,7 +34,7 @@ function generateFaces(){
   //add the newly created image to the LeftSide dev using appendChild()
   //call createRightSide
   //call playGame
-}
+
 
 function createRightSide(){
   //use cloneNode(true) to copy the leftSide div (leftSideImages = theLeftSide.cloneNode(true);)
@@ -37,10 +47,10 @@ function createRightSide(){
 }
 
 function playGame(){
- generateFaces();
- createRightSide();
+  generateFaces();
  theLeftSide.lastChild.onclick= function nextLevel(event){
         event.stopPropagation();
+        removeAllChildren();
          numberOfFaces += 5;
          generateFaces();
   };
