@@ -40,8 +40,15 @@ class Solution
   # Implement the following read-only attributes in the Solution class.
   #* highest_count_across_lines - a number with the value of the highest frequency of a word
   #* highest_count_words_across_lines - an array with the words with the highest frequency
+  :attr_reader :highest_count_across_lines, :highest_count_words_across_lines
+
 
   # Implement the following methods in the Solution class.
+  def analyze_file
+  end
+
+  def calculate calculate_line_with_highest_frequency
+  end
   #* analyze_file() - processes 'test.txt' intro an array of LineAnalyzers
   #* calculate_line_with_highest_frequency() - determines which line of
   #text has the highest number of occurrence of a single word
