@@ -2,16 +2,26 @@
 
 #Implement a class called LineAnalyzer.
 class LineAnalyzer
-  #Implement the following read-only attributes in the LineAnalyzer class. 
+  #Implement the following read-only attributes in the LineAnalyzer class.
   #* highest_wf_count - a number with maximum number of occurrences for a single word (calculated)
+  attr_reader :highest_wf_count, :content, :line_number
+
   #* highest_wf_words - an array of words with the maximum number of occurrences (calculated)
   #* content,         - the string analyzed (provided)
   #* line_number      - the line number analyzed (provided)
 
   #Add the following methods in the LineAnalyzer class.
   #* initialize() - taking a line of text (content) and a line number
+  def initialize(content, line_number)
+    @content = content
+    @line_number = line_number
+    calculate_word_frequency
+  end
   #* calculate_word_frequency() - calculates result
+  def calculate_word_frequency()
+    text = self.content.split(" ")
 
+  end
   #Implement the initialize() method to:
   #* take in a line of text and line number
   #* initialize the content and line_number attributes
@@ -24,7 +34,7 @@ class LineAnalyzer
   #  store that in the highest_wf_words attribute.
 end
 
-#  Implement a class called Solution. 
+#  Implement a class called Solution.
 class Solution
 
   # Implement the following read-only attributes in the Solution class.
@@ -35,11 +45,11 @@ class Solution
   #* analyze_file() - processes 'test.txt' intro an array of LineAnalyzers
   #* calculate_line_with_highest_frequency() - determines which line of
   #text has the highest number of occurrence of a single word
-  #* print_highest_word_frequency_across_lines() - prints the words with the 
+  #* print_highest_word_frequency_across_lines() - prints the words with the
   #highest number of occurrences and their count
-  
+
   # Implement the analyze_file() method() to:
-  #* Read the 'test.txt' file in lines 
+  #* Read the 'test.txt' file in lines
   #* Create an array of LineAnalyzers for each line in the file
 
   # Implement the calculate_line_with_highest_frequency() method to:
