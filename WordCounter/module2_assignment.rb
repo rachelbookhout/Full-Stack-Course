@@ -19,8 +19,11 @@ class LineAnalyzer
   end
   #* calculate_word_frequency() - calculates result
   def calculate_word_frequency()
-    text = self.content.split(" ")
-
+    words = Hash.new
+    self.content.split.each do |word|
+      words[word.downcase] += 1
+    end
+    highest_wf_count = words.keys.sort
   end
   #Implement the initialize() method to:
   #* take in a line of text and line number
@@ -44,10 +47,14 @@ class Solution
 
 
   # Implement the following methods in the Solution class.
-  def analyze_file
+  def analyze_file(file)
+    file.
   end
 
-  def calculate calculate_line_with_highest_frequency
+  def calculate_line_with_highest_frequency
+  end
+
+  def print_highest_word_frequency_across_lines
   end
   #* analyze_file() - processes 'test.txt' intro an array of LineAnalyzers
   #* calculate_line_with_highest_frequency() - determines which line of
