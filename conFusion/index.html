@@ -50,7 +50,7 @@
                     <div class="form-group">
                     <input type="text" class="form-control" placeholder="Email">
                     <input type="text" class = "form-control" placeholder="Password">
-                    <label><input type="checkbox" class = "form-control">Remember me<
+                    <label><input type="checkbox" class = "form-control">Remember me
                      </div>
                     <button type="submit" class="btn btn-default">Sign in</button>
                     </form>
@@ -111,9 +111,15 @@
                 <h3 align=center>This Month's Promotions</h3>
           </div>
           <div class = "col-xs-12 col-sm-9">
-                <h2>Weekend Grand Buffet</h2>
+          <h2 class="media-heading">Weekend Grand Buffet <span class="label label-danger">New</span></h2>
                 <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                 <p><a class="btn btn-primary btn-xs" href="#">More &raquo;</a></p>
+             <div class="media-right media-middle">
+                        <a href="#">
+                        <img class="media-object img-thumbnail"
+                         src="img/buffet.png" alt="buffet">
+                        </a>
+                </div>
             </div>
         </div>
 
@@ -164,10 +170,14 @@
                     </span>
                 <label for="input-time">Time: </label>
                 <input id="input-time" type="time">
-                <span class="result"></span>
+                <span class="result"><span class = "glyphicon glyphicon-time"></span>
             </div>
             </div>
             <button type="submit" class="btn btn-default">Reserve</button>
+            <div class="alert alert-warning alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Warning!</strong> Please <a href= "#phone">Call </a>us to reserve for more than six guests"
+            </div>
         </form>
         </div>
     </div>
@@ -190,7 +200,7 @@
                   121, Clear Water Bay Road<br>
                   Clear Water Bay, Kowloon<br>
                   HONG KONG<br>
-                <i class="fa fa-phone"></i>: +852 1234 5678<br>
+                <i class="fa fa-phone" name = "phone"></i>: +852 1234 5678<br>
                 <i class="fa fa-fax"></i>: +852 8765 4321<br>
                 <i class="fa fa-envelope"></i>:
                 <a href="mailto:confusion@food.net">confusion@food.net</a>
