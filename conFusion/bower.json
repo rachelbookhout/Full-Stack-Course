@@ -1,0 +1,27 @@
+{
+  "name": "full-stack-course",
+  "homepage": "https://github.com/rachelbookhout/Full-Stack-Course",
+  "authors": [
+    "rachelbookhout <rbookhou@gmail.com>"
+  ],
+  "description": "Website for class",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "confusion"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
